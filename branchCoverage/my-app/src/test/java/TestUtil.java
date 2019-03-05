@@ -62,4 +62,12 @@ public class TestUtil {
     int[] arr = {1,2,3};
     assertEquals(true,c.compute(arr) == true);
   }
+
+
+  @Test
+  public void TestComputeCallEven(){
+
+    int[] arr = {3,4};
+    assertEquals(true,c.compute(arr) == false);
+  }
 }
