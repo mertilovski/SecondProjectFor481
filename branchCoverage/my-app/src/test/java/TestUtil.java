@@ -43,5 +43,15 @@ public class TestUtil {
 
   }
 
+  @Test
+  public void TestEmptyComputeCall(){
+
+    int[] arr = {0};
+    try{
+      boolean result = c.compute(arr);
+    }catch(RuntimeException e){
+        //no need for anything.
+    }
+  }
 
 }
