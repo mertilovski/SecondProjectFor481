@@ -67,7 +67,7 @@ public class TestUtil {
   @Test
   public void TestComputeCallEven(){
 
-    int[] arr = {3,4};
+    int[] arr = {3,4,6};
     assertEquals(true,c.compute(arr) == false);
   }
 }
