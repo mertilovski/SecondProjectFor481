@@ -34,7 +34,14 @@ public class TestUtil {
 
   }
 
+  @Test
+  public void TestEmpty(){
 
+    int[] arr = {};
+    boolean result = c.compute(arr);
+    assertEquals(true,result == false);
+
+  }
 
 
 }
