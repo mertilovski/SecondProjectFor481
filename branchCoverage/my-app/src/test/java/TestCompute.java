@@ -16,7 +16,6 @@ public class TestCompute {
   }
 
   @Test
-  //Test for
   public void TestEmptyMq(){ 
     MessageQueue mq = mock(MessageQueue.class);
       c = new Compute(mq);
@@ -24,4 +23,26 @@ public class TestCompute {
       assertEquals(true,result == -1);
   }
 
+  @Test
+  public void TestContains(){ 
+    MessageQueue mq = mock(MessageQueue.class);
+//      when(mq.size()).thenReturn(1);
+      when(mq.contains("word")).thenReturn(true);
+//     when(mq.getAt(0)).thenReturn("word");
+      c = new Compute(mq);
+      int result = c.countNumberOfOccurrences("word");
+      assertEquals(true,result != 0);
+  }
+ 
+  
+  @Test
+  public void TestNotContains(){ 
+    MessageQueue mq = mock(MessageQueue.class);
+      when(mq.size()).thenReturn(1);
+      when(mq.contains("word")).thenReturn(false);
+      c = new Compute(mq);
+      int result = c.countNumberOfOccurrences("word");
+      assertEquals(true,result == 0);
+  }
+  
 }
