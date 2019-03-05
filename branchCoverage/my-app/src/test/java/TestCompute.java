@@ -45,4 +45,27 @@ public class TestCompute {
       assertEquals(true,result == 0);
   }
   
+  @Test
+  public void TestEqualsCounter(){ 
+    MessageQueue mq = mock(MessageQueue.class);
+      when(mq.size()).thenReturn(1);
+      when(mq.contains("word")).thenReturn(true);
+      when(mq.getAt(0)).thenReturn("word");
+      c = new Compute(mq);
+      int result = c.countNumberOfOccurrences("word");
+      assertEquals(true,result == 1);
+  }
+
+  @Test
+  public void TestNotEqualsCounter(){ 
+    MessageQueue mq = mock(MessageQueue.class);
+      when(mq.size()).thenReturn(1);
+      when(mq.contains("word")).thenReturn(true);
+      when(mq.getAt(0)).thenReturn("notword");
+      c = new Compute(mq);
+      int result = c.countNumberOfOccurrences("word");
+      assertEquals(true,result == 0);
+  }
+
+
 }
