@@ -14,4 +14,14 @@ public class TestCompute {
     c = new Compute(mq);
     assertTrue(true);
   }
+
+  @Test
+  //Test for
+  public void TestEmptyMq(){ 
+    MessageQueue mq = mock(MessageQueue.class);
+      c = new Compute(mq);
+      int result = c.countNumberOfOccurrences("");
+      assertEquals(true,result == -1);
+  }
+
 }
