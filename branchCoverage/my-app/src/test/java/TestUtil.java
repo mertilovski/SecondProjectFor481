@@ -44,11 +44,11 @@ public class TestUtil {
   }
 
   @Test
-  public void TestEmptyComputeCall(){
+  public void TestComputeCallWithZero(){
 
-    int[] arr = {0};
+    int[] arr = {0,1,2};
     try{
-      boolean result = c.compute(arr);
+      c.compute(arr);
     }catch(RuntimeException e){
         //no need for anything.
     }
