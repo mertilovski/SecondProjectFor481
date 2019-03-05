@@ -54,4 +54,12 @@ public class TestUtil {
     }
   }
 
+
+
+  @Test
+  public void TestComputeCallOdd(){
+
+    int[] arr = {1,2,3};
+    assertEquals(true,c.compute(arr) == true);
+  }
 }
